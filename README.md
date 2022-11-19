@@ -1,14 +1,15 @@
 # Airflow Dag : load local csv data into MSSQL database
 
-![](https://github.com/chanchanngann/airflow_local_to_mssql/blob/master/images/02_visuals.png)
-
-
-
 ### Objective
-__To automate the process of loading csv data from local path into MSSQL database using Airflow.__
+__To perform ETL pipeline of loading csv data from local path into MSSQL database using Airflow.__
 
 ### Flow
+1. Create table at mssql
+2. pause for 1 sec 
+3. extract csv data, transforming the data if need and inserting the transformed data into mssql db
+
 ![](https://github.com/chanchanngann/airflow_local_to_mssql/blob/master/images/01_flow.png)
+
 
 ### Some good practices to follow
 
