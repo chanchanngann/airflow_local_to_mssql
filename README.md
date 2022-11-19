@@ -5,13 +5,13 @@ __To perform ETL pipeline of loading csv data from local path into MSSQL databas
 
 ### Flow
 1. Create table at mssql
-2. pause for 1 sec 
-3. extract csv data, transforming the data if need and inserting the transformed data into mssql db
+2. Pause for 1 sec 
+3. Extract csv data, transforming the data and inserting the transformed data into mssql db
 
 ![](https://github.com/chanchanngann/airflow_local_to_mssql/blob/master/images/01_flow.png)
 
 
-### Some good practices to follow
+### Good practices...
 
 1. Avoid Top level Python Code
    you should not write any code outside the tasks. 
@@ -21,7 +21,7 @@ __To perform ETL pipeline of loading csv data from local path into MSSQL databas
    use the Airflow Variables inside the execute() methods of the operators.
 4. Specify configuration details consistently
    Specify the configuration values in a single location (e.g., a shared YAML file), following the DRY (don’t repeat yourself) principle.
-5. make your DAGs more linear 
+5. Make your DAGs more linear 
    The DAG that has simple linear structure A -> B -> C will experience less delays in task scheduling than 
    DAG that has a deeply nested tree structure with exponentially growing number of depending tasks for example. 
 
