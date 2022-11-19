@@ -1,4 +1,4 @@
-# Airflow Dag : load local csv data into MSSQL database
+# Airflow Dag : loading csv data into MSSQL database
 
 ### Objective
 __To perform ETL pipeline of loading csv data from local path into MSSQL database using Airflow.__
@@ -6,7 +6,7 @@ __To perform ETL pipeline of loading csv data from local path into MSSQL databas
 ### Flow
 1. Create table at mssql
 2. Pause for 1 sec 
-3. Extract csv data, transforming the data and inserting the transformed data into mssql db
+3. Extract csv data, transforming the data and inserting the transformed data into the target table at mssql db
 
 ![](https://github.com/chanchanngann/airflow_local_to_mssql/blob/master/images/01_flow.png)
 
@@ -27,7 +27,7 @@ __To perform ETL pipeline of loading csv data from local path into MSSQL databas
 
 ## Conclusion
 
-In this exercise I pulled data from local csv path, and inserted the data into mssql database with the help of airflow.
+In this exercise I built an ETL pipeline using Airflow: pulling csv data from a local path and inserting the data into mssql database.
 
 *References:*
 - https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html
